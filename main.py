@@ -1,5 +1,6 @@
 import pygame
 import os
+
 pygame.font.init()
 pygame.mixer.init()
 
@@ -129,7 +130,7 @@ def main():
                     yellow_bullets.append(bullet)
                     pygame.mixer.Sound.play(BULLET_FIRE)
 
-                if event.key == pygame.K_RCTRL and len(red_bullets) < MAX_BULLETS: # YELLOW SHOOT BULLET IF > MAX
+                if event.key == pygame.K_COMMA and len(red_bullets) < MAX_BULLETS: # YELLOW SHOOT BULLET IF > MAX
                     bullet = pygame.Rect(
                         red.x, red.y + red.height//2 -2, 10, 5)
                     red_bullets.append(bullet)
